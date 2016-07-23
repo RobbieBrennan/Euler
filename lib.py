@@ -21,6 +21,7 @@ def prime_factors(n, num_primes = 999):
         modu = n % i
         if modu == 0:
             factor_list.append(i) 
-            factor_list += prime_factors(n/i)
-    return list(set(factor_list))
+            factor_list += prime_factors(n/i,num_primes)
+            break
+    return factor_list
             
